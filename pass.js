@@ -3,27 +3,29 @@ const uc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lc = "abcdefghijklmnopqrstuvwxyz";
 const symbols = "!@#$%^&*()_+{}:[];,./`~";
 
+const radio_btn_num=document.getElementById("radio_btn_num");
+const radio_btn_up=document.getElementById("radio_btn_up");
+const radio_btn_lo=document.getElementById("radio_btn_lo");
+const radio_btn_sp=document.getElementById("radio_btn_sp");
+
 const len = document.getElementById("length");
-const need_num = document.getElementById("need_num");
-const need_up = document.getElementById("need_up");
-const need_lc = document.getElementById("need_lc");
-const need_sp = document.getElementById("need_sp");
 let my_output = document.getElementById("output");
 const my_btn = document.getElementById("btn");
 
 my_btn.onclick= function () {
     let charpool = "";
 
-    if (need_num.value.toLowerCase() === "yes") {
-        charpool += numbers
+    if (radio_btn_num.checked){
+        charpool+=numbers
     }
-    if (need_up.value.toLowerCase() === "yes") {
+
+    if (radio_btn_up.checked) {
         charpool += uc
     }
-    if (need_lc.value.toLowerCase() === "yes") {
+    if (radio_btn_lo.checked) {
         charpool += lc
     }
-    if (need_sp.value.toLowerCase() === "yes") {
+    if (radio_btn_sp.checked) {
         charpool += symbols
     }
 

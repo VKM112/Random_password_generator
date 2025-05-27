@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="pass.css">
 </head>
+
 <body>
-    <label for="length"></label>
-    <input id="length" type="number" placeholder="Enter a lenght for password"><br/><br/>
+    <div class="container">
+        <h2>Password Generator</h2>
 
-    <label for="text">Should your Password contain numbers</label><br/>
-    <input id="need_num" type="text" placeholder="Enter Yes or No"><br/><br/>
+        <label for="length">Password Length:</label>
+        <input id="length" type="number" placeholder="Enter password length">
 
-    <label for="text">Should your Password contain Uppercase Letters</label><br/>
-    <input id="need_up" type="text" placeholder="Enter Yes or No"><br/><br/>
+        <label for="radio_btn_num">
+            <input type="checkbox" id="radio_btn_num"> Include Numbers
+        </label>
 
-    <label for="text">Should your Password contain Lowercase Letters</label><br/>
-    <input id="need_lc" type="text" placeholder="Enter Yes or No"><br/><br/>
+        <label for="radio_btn_up">
+            <input type="checkbox" id="radio_btn_up"> Include Uppercase Letters
+        </label>
 
-    <label for="text">Should your Password contain Special characters</label><br/>
-    <input id="need_sp" type="text" placeholder="Enter Yes or No"><br/><br/>
+        <label for="radio_btn_lo">
+            <input type="checkbox" id="radio_btn_lo"> Include Lowercase Letters
+        </label>
 
-    <h3 id="output"></h3>
+        <label for="radio_btn_sp">
+            <input type="checkbox" id="radio_btn_sp"> Include Special Characters
+        </label>
 
-    <button onclick=my_btn() id="btn">Start</button>
+        <button id="btn">Generate Password</button>
+
+        <h3 id="output"></h3>
+    </div>
+
     <script src="pass.js"></script>
 </body>
+
+
 </html>
